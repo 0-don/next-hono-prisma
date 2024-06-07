@@ -18,7 +18,7 @@ export default async function MainLayout(props: MainLayoutProps) {
   queryClient.setQueryData(["me"], me);
 
   return (
-    <HydrationBoundary key={Math.random()} state={dehydrate(queryClient)}>
+    <HydrationBoundary state={dehydrate(queryClient)}>
       {props.children}
     </HydrationBoundary>
   );

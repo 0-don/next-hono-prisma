@@ -15,7 +15,7 @@ export default function LogoutPage(props: LogoutPageProps) {
       .mutateAsync()
       .then(() => {
         router.refresh(); // cache reset
-        setTimeout(() => router.push("/login"), 100);
+        setTimeout(() => router.push("/login"), 1000);
       })
       .catch((error) => console.error(error));
   }, []);
